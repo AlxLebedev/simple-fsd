@@ -1,0 +1,8 @@
+@import './palette.scss';
+
+:root {
+    --bg-color: var(--color-deep-gray);
+    --text-color: var(--color-white);
+    --decor-color: var(--color-blue);
+    --accent-color: var(--color-purple)
+}
