@@ -1,0 +1,11 @@
+.button {
+    color: var(--decor-color);
+    background-color: transparent;
+    border: 1px solid var(--decor-color);
+    transition: border-color .3s;
+    cursor: pointer;
+
+    &:hover {
+        border-color: var(--accent-color);
+    }
+}
