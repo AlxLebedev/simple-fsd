@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 import styles from "./index.module.scss";
 import clsx from "clsx";
-import { ButtonType } from "../types";
+import { ButtonType } from "@/shared/ui/types";
 
 export const Button = ({ type = "button", text, handler, externalClassName }: ButtonType): ReactElement => {
     return (
