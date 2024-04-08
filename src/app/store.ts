@@ -6,6 +6,3 @@ export const store = configureStore({
         colors: colorsReducer,
     },
 });
-
-export type RootState = ReturnType<typeof store.getState>  // declare.d.ts
-export type AppDispatch = typeof store.dispatch  // declare.d.ts
