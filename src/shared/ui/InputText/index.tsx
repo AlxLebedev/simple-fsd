@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 import styles from "./index.module.scss";
 import clsx from "clsx";
-import { IInputText } from "@/shared/ui/types";
+import { IInputText } from "@shared/ui/types";
 
 export const InputText = ({
     id,

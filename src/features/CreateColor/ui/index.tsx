@@ -1,10 +1,10 @@
 import { ReactElement, useRef } from "react";
 import styles from "./index.module.scss";
 import clsx from "clsx";
-import { CreateColorFormType } from "@/features/CreateColor/model/types";
-import { InputText, InputColor, Button } from "@/shared/ui";
-import { addColor } from "@/features/CreateColor/model/createColorSlice";
-import { useDispatch } from "@/shared/hooks/redux";
+import { CreateColorFormType } from "@features/CreateColor/model/types";
+import { InputText, InputColor, Button } from "@shared/ui";
+import { addColor } from "@features/CreateColor/model/createColorSlice";
+import { useDispatch } from "@shared/hooks/redux";
 
 export const CreateColorForm = ({ externalClassName }: CreateColorFormType): ReactElement => {
     const dispatch = useDispatch();

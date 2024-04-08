@@ -1,8 +1,8 @@
 import { ReactElement } from "react";
 import clsx from "clsx";
 import styles from "./index.module.scss";
-import { Logo } from "@/shared/ui";
-import { HeaderType } from "@/widgets/Header/model/types";
+import { Logo } from "@shared/ui";
+import { HeaderType } from "@widgets/Header/model/types";
 
 export const Header = ({ className }: HeaderType): ReactElement => {
     return (

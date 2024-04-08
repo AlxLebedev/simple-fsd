@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 import styles from "./index.module.scss";
 import clsx from "clsx";
-import { IInputColor } from "@/shared/ui/types";
+import { IInputColor } from "@shared/ui/types";
 
 export const InputColor = ({
     id,

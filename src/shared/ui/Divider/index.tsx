@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 import clsx from "clsx";
 import styles from "./index.module.scss";
-import { DividerType } from "@/shared/ui/types";
+import { DividerType } from "@shared/ui/types";
 
 export const Divider = ({ className }: DividerType): ReactElement => {
     return (
