@@ -3,8 +3,11 @@ import styles from "./index.module.scss";
 import clsx from "clsx";
 import { CreateColorFormType } from "../model/types";
 import { InputText, InputColor, Button } from "../../../shared/ui";
+import { addColor } from "../model/createColorSlice";
+import { useDispatch } from "../../../shared/hooks/redux";
 
 export const CreateColorForm = ({ externalClassName }: CreateColorFormType): ReactElement => {
+    const dispatch = useDispatch();
     const form = useRef(null);
 
     const submitHandler = (e: { preventDefault: () => void; }) => {
@@ -12,7 +15,9 @@ export const CreateColorForm = ({ externalClassName }: CreateColorFormType): Rea
 
         if (form.current) {
             const formData = new FormData(form.current);
-            console.log("SubmitHandler", formData);
+            const name = String(formData.get("color-name") || "untitled");
+            const code = String(formData.get("color-code") || "#d1a1ff");
+            dispatch(addColor({ name, code }));
         }
     };
 
