@@ -3,11 +3,11 @@ import type { PayloadAction } from "@reduxjs/toolkit";
 import { ColorType } from "./types";
 
 type ColorsState = {
-    colors: ColorType[];
+    list: ColorType[];
 };
 
 const initialState: ColorsState = {
-    colors: [],
+    list: [],
 };
 
 export const colorSlice = createSlice({
@@ -15,7 +15,7 @@ export const colorSlice = createSlice({
     initialState: initialState,
     reducers: {
         addColor: (state, action: PayloadAction<ColorType>) => {
-            if (action.payload) state.colors = [...state.colors, action.payload]
+            if (action.payload) state.list = [...state.list, action.payload]
         }
     }
 });
