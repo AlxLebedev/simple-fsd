@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
-import { ColorType } from "./types";
+import { ColorType } from "@entities/ColorCard/model/types";
 
 type ColorsState = {
     list: ColorType[];

@@ -3,6 +3,7 @@
     padding: 20px;
     text-align: center;
     border: 1px solid var(--decor-color);
+    transition: border-color .3s;
 
     &:hover {
         border-color: var(--accent-color);
@@ -20,5 +21,21 @@
         width: 100px;
         height: 30px;
         margin: auto;
+    }
+
+    &__del {
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        width: 16px;
+        height: 16px;
+        background-color: var(--color-green);
+        border: none;
+        border-radius: 100%;
+        transition: background-color .3s;
+
+        &:hover {
+            background-color: var(--color-red);
+        }
     }
 }
