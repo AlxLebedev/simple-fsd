@@ -1,11 +1,6 @@
-import { CSSProperties } from "react";
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
-
-type ColorType = {
-    name: string;
-    code: CSSProperties["color"];
-}
+import { ColorType } from "./types";
 
 type ColorsState = {
     colors: ColorType[];

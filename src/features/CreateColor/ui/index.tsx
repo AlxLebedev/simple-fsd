@@ -1,24 +1,19 @@
-import { ReactElement, useRef } from "react";
+import { ReactElement, SyntheticEvent, useRef } from "react";
 import styles from "./index.module.scss";
 import clsx from "clsx";
 import { CreateColorFormType } from "@features/CreateColor/model/types";
 import { InputText, InputColor, Button } from "@shared/ui";
+import { extractFormData } from "../lib/extractFormData";
 import { addColor } from "@features/CreateColor/model/createColorSlice";
 import { useDispatch } from "@shared/hooks/redux";
 
 export const CreateColorForm = ({ externalClassName }: CreateColorFormType): ReactElement => {
     const dispatch = useDispatch();
-    const form = useRef(null);
+    const form = useRef<HTMLFormElement>(null);
 
-    const submitHandler = (e: { preventDefault: () => void; }) => {
+    const submitHandler = (e: SyntheticEvent<HTMLFormElement, SubmitEvent>) => {
         e.preventDefault();
-
-        if (form.current) {
-            const formData = new FormData(form.current);
-            const name = String(formData.get("color-name") || "untitled");
-            const code = String(formData.get("color-code") || "#d1a1ff");
-            dispatch(addColor({ name, code }));
-        }
+        if (form.current) dispatch(addColor(extractFormData(new FormData(form.current))));
     };
 
     return (
