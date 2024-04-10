@@ -21,6 +21,5 @@ export const colorSlice = createSlice({
 });
 
 export const { addColor } = colorSlice.actions;
-export const selectColors = (state: RootState) => state.colors;
 
 export default colorSlice.reducer;

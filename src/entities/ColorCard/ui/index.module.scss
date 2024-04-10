@@ -1,0 +1,24 @@
+.color-card {
+    position: relative;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid var(--decor-color);
+
+    &:hover {
+        border-color: var(--accent-color);
+    }
+
+    &__name {
+        font-weight: 500;
+    }
+
+    &__code {
+        margin-bottom: 1em;
+    }
+
+    &__example {
+        width: 100px;
+        height: 30px;
+        margin: auto;
+    }
+}

@@ -1,0 +1,28 @@
+.color-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+    max-width: 800px;
+    margin: auto;
+    padding: 15px;
+    list-style-type: none;
+    color: var(--text-color);
+
+    @media (min-width: 375px) {
+        padding: 15px;
+    }
+
+    @media(min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @media(min-width: 1024px) {
+        max-width: none;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    @media(min-width: 1360px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

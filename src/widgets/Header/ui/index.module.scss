@@ -17,6 +17,10 @@
         gap: 40px;
         margin-bottom: 10%;
         place-items: center;
+
+        @media (min-width: 768px) {
+            margin-bottom: 0;
+        }
     }
 
     &__heading-container {
