@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
-import { ColorType, ColorsState } from "@entities/Color/model/types";
+import { ColorDataType, ColorsState } from "@entities/Color/model/types";
 
 const initialState: ColorsState = {
     list: [],
@@ -10,7 +10,7 @@ export const colorSlice = createSlice({
     name: "colors",
     initialState: initialState,
     reducers: {
-        addColor: (state, action: PayloadAction<ColorType>) => {
+        addColor: (state, action: PayloadAction<ColorDataType>) => {
             if (action.payload) state.list = [...state.list, action.payload];
             return state;
         },

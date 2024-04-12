@@ -1,17 +1,17 @@
 import { CSSProperties } from "react";
 
-export type ColorType = {
+export type ColorDataType = {
     id: string;
     name: string;
     code: CSSProperties["color"];
 };
 
-export type ColorCardType = {
-    color: ColorType,
+export type ColorType = {
+    color: ColorDataType,
     renderDelButton: (id: string, className: string) => JSX.Element;
     externalClassName?: string;
 };
 
 export type ColorsState = {
-    list: ColorType[];
+    list: ColorDataType[];
 };
