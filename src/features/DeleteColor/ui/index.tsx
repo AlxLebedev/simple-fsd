@@ -1,10 +1,14 @@
 import { ReactElement } from "react";
 import { DeleteColorButtonType } from "../model/types";
 import { Button } from "@shared/ui";
+import { removeColor } from "@entities/Color";
+import { useDispatch } from "@shared/hooks/redux";
 
 export const DeleteColorButton = ({ id, externalClassName }: DeleteColorButtonType): ReactElement => {
+    const dispatch = useDispatch();
+
     const deleteColorHandler = (): void => {
-        console.log("Del id ", id);
+        dispatch(removeColor(id));
     };
 
     return (
