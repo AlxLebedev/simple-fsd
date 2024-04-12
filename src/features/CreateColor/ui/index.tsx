@@ -4,7 +4,7 @@ import clsx from "clsx";
 import { CreateColorFormType } from "@features/CreateColor/model/types";
 import { InputText, InputColor, Button } from "@shared/ui";
 import { extractFormData } from "../lib/extractFormData";
-import { addColor } from "@features/CreateColor/model/createColorSlice";
+import { addColor } from "@entities/Color";
 import { useDispatch } from "@shared/hooks/redux";
 
 export const CreateColorForm = ({ externalClassName }: CreateColorFormType): ReactElement => {

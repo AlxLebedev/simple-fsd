@@ -1,1 +1,0 @@
-export { ColorCard } from "./ui";

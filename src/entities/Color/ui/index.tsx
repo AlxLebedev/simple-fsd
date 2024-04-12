@@ -3,7 +3,7 @@ import clsx from "clsx";
 import styles from "./index.module.scss";
 import { ColorCardType } from "../model/types";
 
-export const ColorCard = ({ color: {id, name, code}, renderDelButton, externalClassName }: ColorCardType): ReactElement => {
+export const Color = ({ color: {id, name, code}, renderDelButton, externalClassName }: ColorCardType): ReactElement => {
     return (
         <li className={clsx(styles["color-card"], externalClassName)}>
             {renderDelButton(id, styles["color-card__del"])}

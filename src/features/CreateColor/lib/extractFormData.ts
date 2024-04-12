@@ -1,5 +1,5 @@
 import { v1 as uuidv1 } from "uuid";
-import { ColorType } from "../model/types";
+import { ColorType } from "@entities/Color/model/types";
 
 export const extractFormData = (data: FormData): ColorType => {
     const id = uuidv1();

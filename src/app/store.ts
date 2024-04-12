@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import colorsReducer from "@features/CreateColor/model/createColorSlice";
+import { colorReducer } from "@entities/Color";
 
 export const store = configureStore({
     reducer: {
-        colors: colorsReducer,
+        colors: colorReducer,
     },
 });

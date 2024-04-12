@@ -2,9 +2,8 @@ import { ReactElement } from "react";
 import clsx from "clsx";
 import styles from "./index.module.scss";
 import { ColorListType } from "../model/types";
-import { selectColorsList } from "@features/CreateColor/model/colorSelector";
 import { useSelector } from "@shared/hooks/redux";
-import { ColorCard } from "@entities/ColorCard";
+import { Color, selectColorsList } from "@entities/Color";
 import { DeleteColorButton } from "@features/DeleteColor";
 
 export const ColorList = ({ externalClassName }: ColorListType): ReactElement | null => {
@@ -15,7 +14,7 @@ export const ColorList = ({ externalClassName }: ColorListType): ReactElement | 
         null :
         <ul className={clsx(styles["color-list"], externalClassName)}>
             {colorsList.map((color) => (
-                <ColorCard
+                <Color
                     color={color}
                     renderDelButton={
                         (id, className) => <DeleteColorButton id={id} externalClassName={className} />
