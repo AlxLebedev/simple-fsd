@@ -4,6 +4,8 @@
     text-align: center;
     border: 1px solid var(--decor-color);
     transition: border-color .3s;
+    opacity: 0;
+    animation: setVisible .3s forwards;
 
     &:hover {
         border-color: var(--accent-color);
@@ -38,4 +40,9 @@
             background-color: var(--color-red);
         }
     }
+}
+
+@keyframes setVisible {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
