@@ -4,6 +4,7 @@ import clsx from "clsx";
 import { CreateColorFormType } from "@features/CreateColor/model/types";
 import { InputText, InputColor, Button } from "@shared/ui";
 import { extractFormData } from "../lib/extractFormData";
+import { saveColorInStorage } from "../lib/saveColorInStorage";
 import { addColor } from "@entities/Color";
 import { useDispatch } from "@shared/hooks/redux";
 
@@ -13,7 +14,12 @@ export const CreateColorForm = ({ externalClassName }: CreateColorFormType): Rea
 
     const submitHandler = (e: SyntheticEvent<HTMLFormElement, SubmitEvent>) => {
         e.preventDefault();
-        if (form.current) dispatch(addColor(extractFormData(new FormData(form.current))));
+        
+        if (form.current) {
+            const currentColor = extractFormData(new FormData(form.current));
+            dispatch(addColor(currentColor));
+            saveColorInStorage(currentColor);
+        }
     };
 
     return (

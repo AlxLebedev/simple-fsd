@@ -1,9 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 import { ColorDataType, ColorsState } from "@entities/Color/model/types";
+import { getColorsFromStorage } from "../lib/getColorsFromStorage";
 
 const initialState: ColorsState = {
-    list: [],
+    list: getColorsFromStorage(),
 };
 
 export const colorSlice = createSlice({
